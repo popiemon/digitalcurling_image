@@ -1,0 +1,19 @@
+version: '3'
+services:
+  DC3:
+    image: digitalcurling-image
+    tty: true
+    stdin_open: true
+    container_name: digitalcurling
+    volumes:
+      - /home/keny/Programs:/Programs
+    working_dir: /workspace
+    deploy:
+      resources:
+        reservations:
+          devices:
+           - driver: nvidia
+             capabilities: [gpu]
+   
+
+
