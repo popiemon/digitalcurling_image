@@ -6,7 +6,7 @@ services:
     stdin_open: true
     container_name: digitalcurling
     volumes:
-      - /home/keny/Programs:/Programs
+      - .:/Programs
     working_dir: /workspace
     deploy:
       resources:
