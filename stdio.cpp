@@ -153,7 +153,7 @@ dc::Move OnMyTurn(dc::GameState const& game_state)
         {
             if (shot_class == "simufile") {
                 nlohmann::json json_obj = nlohmann::json::parse(input_game_state);
-                from_json_gamestate(input_game_state, temp_game_state);
+                from_json_gamestate(json_obj, temp_game_state);
             }
             else {
                 temp_game_state = game_state;
